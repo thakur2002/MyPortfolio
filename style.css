@@ -304,11 +304,12 @@ section .title::after{
 
 .skills {
     background: rgb(1, 1, 46);
-    padding: 20px 0;
+    padding: 60px 20px; /* Increased top and bottom padding */
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .skills .title::before {
@@ -321,39 +322,42 @@ section .title::after{
 }
 
 .skills .max-width {
-    width: 90%;
-    max-width: 800px; /* Maximum width for the grid */
+    width: 100%;
+    max-width: 1200px; /* Ensures grid is contained */
     margin: auto;
     text-align: center;
 }
 
 .skills .container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Exactly 4 icons per row */
-    gap: 20px; /* Space between grid items */
-    justify-content: center; /* Center the grid within the container */
-    margin: auto; /* Center the entire grid */
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 30px; /* More space between grid items */
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* Ensure grid is centered */
+    padding: 20px 0; /* Add spacing inside the grid container */
 }
 
 .skills .container div {
     text-align: center;
-    transition: transform 0.3s ease; /* Smooth hover animation */
+    transition: transform 0.3s ease;
 }
 
 .skills .container div:hover {
-    transform: scale(1.1); /* Slight scaling on hover */
+    transform: scale(1.1); /* Hover effect */
 }
 
 .skill-img {
-    width: 60px; /* Icon width */
-    height: 60px; /* Icon height */
-    transition: transform 0.3s ease; /* Smooth scaling effect */
+    width: 60px; /* Adjust as needed */
+    height: 60px;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
 }
 
 .skill-name {
     margin-top: 10px;
     font-size: 14px;
-    color: #fff; /* Ensures text is readable against the dark background */
+    color: #fff; /* Text color for visibility */
 }
 
 /* projects section styling */
