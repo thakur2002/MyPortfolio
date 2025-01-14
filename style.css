@@ -302,30 +302,37 @@ section .title::after{
 
 /* skills section styling */
 
-.skills{
+.skills {
     background: rgb(1, 1, 46);
-     padding: 20px 0;
+    padding: 20px 0;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.skills .title::before{
+
+.skills .title::before {
     background: #fff;
 }
-.skills .title::after{
+
+.skills .title::after {
     background: rgb(1, 1, 46);
     content: "what i know";
 }
 
 .skills .max-width {
     width: 90%;
+    max-width: 800px; /* Maximum width for the grid */
     margin: auto;
     text-align: center;
 }
 
 .skills .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid layout */
+    grid-template-columns: repeat(4, 1fr); /* Exactly 4 icons per row */
     gap: 20px; /* Space between grid items */
-    justify-items: center; /* Center align items within the grid */
+    justify-content: center; /* Center the grid within the container */
+    margin: auto; /* Center the entire grid */
 }
 
 .skills .container div {
@@ -346,8 +353,9 @@ section .title::after{
 .skill-name {
     margin-top: 10px;
     font-size: 14px;
-    color: #333;
+    color: #fff; /* Ensures text is readable against the dark background */
 }
+
 /* projects section styling */
 
 .projects{
